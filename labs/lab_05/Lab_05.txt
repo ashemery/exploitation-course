@@ -1,0 +1,6 @@
+VUPlayer 2.49 - '.m3u' Local Buffer Overflow
+
+Please check the URL for the vulnerable application.
+https://www.exploit-db.com/exploits/16617
+
+The exploit.py file is to be used as a your exploit template.
