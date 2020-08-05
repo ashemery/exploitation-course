@@ -1,0 +1,6 @@
+FTPShell Client 6.7 Buffer Overflow
+
+Please check the URL for the vulnerable application.
+https://www.exploit-db.com/exploits/44596
+
+The exploit.py file is to be used as a your exploit template.
