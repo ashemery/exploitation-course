@@ -1,0 +1,8 @@
+VUPlayer 2.49 - '.m3u' Local Buffer Overflow
+
+In this lab we try to understand what bad characters are, how to find them, and then how to eliminate them so they do not break our shellcode.
+
+Please check the URL for the vulnerable application.
+https://www.exploit-db.com/exploits/16617
+
+The exploit.py file is to be used as a your exploit template.
