@@ -1,0 +1,29 @@
+Howto Compile the code (test.c):
+1. Copy the code test.c to your computer then compile it
+
+# How to Compile the code (Compilation)
+1. Make sure you install MinGW. Usually it will be located at C:\MinGW
+
+2. Use the line below for no optimization and disabling stack protection (-O0 could be removed since it is the default)
+gcc.exe test.c -o test.exe -O0 -m32 -fno-stack-protector -static-libgcc
+
+3. If you want to test the different optimizatios available, use any of the following:
+
+# Size
+gcc.exe test.c -o testOs.exe -Os -m32 -fno-stack-protector -static-libgcc
+
+# let's call it level 1
+gcc.exe test.c -o testO1.exe -O1 -m32 -fno-stack-protector -static-libgcc
+
+# level 3 and yes 2 exists too :)
+gcc.exe test.c -o testO3.exe -O3 -m32 -fno-stack-protector -static-libgcc
+
+# We want speed
+gcc.exe test.c -o testOfast.exe -Ofast -m32 -fno-stack-protector -static-libgcc
+
+4. If you want to specify the includes and libraries from CLI, use:
+gcc.exe test.c -o testO3.exe -O3 -m32 -I"C:\MinGW\include" -L"C:\MinGW\lib" -static-libgcc -fno-stack-protector
+
+
+
+Q) What is the JMP ESP address on your computer and why is it different than mine?
