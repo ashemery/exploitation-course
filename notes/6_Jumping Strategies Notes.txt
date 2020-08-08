@@ -1,0 +1,13 @@
+32-bit binary: 00000000 00000000 00000000 00000000
+400 in binary: 00000000 00000000 00000001 10010000
+-400   binary: 11111111 11111111 11111110 01110000
+-400 in   hex:    FF       FF       FE       70
+
+-400 in little endian = \x70\xFE\xFF\xFF
+
+
+References
+https://www.tutorialspoint.com/assembly_programming/assembly_quick_guide.htm
+https://c9x.me/x86/html/file_module_x86_id_147.html
+https://en.wikibooks.org/wiki/X86_Assembly/Control_Flow
+
