@@ -1,0 +1,6 @@
+s_readline();
+s_string("GMON ");
+s_string_variable("DATA");
+printf("-------------------------------------------------------\n");
+sleep(5);
+

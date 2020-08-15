@@ -1,0 +1,3 @@
+This is our first case study covering how to exploit an application (Vulnserver) using SEH based memory corruption attacks.
+
+I used Python2 in the exploit code, feel free to update to work with Python3.
