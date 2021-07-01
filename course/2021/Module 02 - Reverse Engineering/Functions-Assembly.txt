@@ -1,0 +1,54 @@
+// beginning of function myfun1
+	push   ebp
+	mov    ebp,esp
+
+	sub    esp,0x18
+
+	mov    eax,DWORD PTR [ebp+8]
+	mov    DWORD PTR [esp+4],eax
+	lea    eax,[ebp-16]
+	mov    DWORD PTR [esp],eax
+	call   0x80482c4 <strcpy@plt>
+
+	lea    eax,[ebp-16]
+	mov    DWORD PTR [esp],eax
+	call   0x80483b4 <myfun2>
+
+	leave
+	ret
+
+
+// beginning of function myfun2
+	push   ebp
+	mov    ebp,esp
+	sub    esp,0x8
+
+	mov    eax,DWORD PTR [ebp+8]
+	mov    DWORD PTR [esp+4],eax
+	mov    DWORD PTR [esp],0x8048520
+	call   0x80482d4 <printf@plt>
+
+	leave
+	ret
+
+
+// beginning of main
+	push   ebp
+	mov    ebp,esp
+	sub    esp,0x4
+	
+	cmp    DWORD PTR [ebp+8],0x1
+	jle    0x8048412
+	
+	mov    eax,DWORD PTR [ebp+12]
+	add    eax,0x4
+	mov    eax,DWORD PTR [eax]
+	mov    DWORD PTR [esp],eax
+	call   0x80483cf <myfun1>
+	jmp    0x804841e
+	
+	mov    DWORD PTR [esp],0x8048540
+	call   0x80482d4 <printf@plt>
+	
+	leave
+	ret

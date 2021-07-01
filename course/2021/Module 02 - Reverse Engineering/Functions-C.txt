@@ -1,0 +1,20 @@
+// beginning of function myfun1
+void myfun1(char *str) {
+	char buffer[16];
+	strcpy(buffer, str);
+	myfun2(buffer);
+} 
+
+
+// beginning of function myfun2
+void myfun2(char *x) {
+	printf(" You entered: %s\n", x);
+} 
+
+// beginning of main
+int main(int argc, char *argv[]){
+	if (argc > 1)
+		myfun1(argv[1]);
+	else printf("No arguments!\n");
+}
+
